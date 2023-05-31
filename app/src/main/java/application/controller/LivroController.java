@@ -76,4 +76,18 @@ public class LivroController {
 
         return "redirect:/livro/list";
     }
+    @RequestMapping("/isbn")
+    public String isbn() {
+        return "/livro/isbn";
+    }
+
+    @RequestMapping(value = "/isbn", method = RequestMethod.POST)
+    public String isbn(@RequestParam("titulo") String titulo) {
+        Livro livro = new Livro();
+        livro.setTitulo(titulo);
+
+        livroRepo.save(livro);
+        return "redirect:/livro/list";
+    }
+
 }
