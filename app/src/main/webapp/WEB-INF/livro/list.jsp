@@ -15,6 +15,7 @@
                 <tr>
                     <th>Id</th>
                     <th>Titulo</th>
+                    <th>ISBN</th>
                     <th>&nbsp;</th>
                 </tr>
                 <c:forEach var="item" items="${livros}">
@@ -25,7 +26,6 @@
                         <td>
                             <a href="/livro/update?id=${item.id}" class="btn btn-warning">Editar</a>
                             <a href="/livro/delete?id=${item.id}" class="btn btn-danger">Excluir</a>
-                           <a href=""></a>
                         </td>
                     </tr>
                 </c:forEach>
